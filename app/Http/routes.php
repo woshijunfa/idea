@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/doc/{doc}',"DocController@showdoc");
+Route::get('/doc/{doc}/{chapter}',"DocController@show");
