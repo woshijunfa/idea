@@ -4,6 +4,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use App\Models\User;
+use View;
 
 class test extends Command
 {
@@ -14,7 +16,7 @@ class test extends Command
      *
      * @var string
      */
-    protected $signature = 'command:test';
+    protected $signature = 'test';
 
     /**
      * The console command description.
@@ -40,7 +42,12 @@ class test extends Command
      */
     public function handle()
     {
+        $content = View::make('passport.login')->render();
+
+        var_dump($content);die;
+
+        $result = User::initEmail("xxx3@qufenqi.com");
         //
-        var_dump('test');
+        var_dump($result);
     }
 }
