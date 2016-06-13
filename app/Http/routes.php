@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test',function(){return view("passport.registerEmail",["uuid"=>'sdfdsfsdf']);});
+Route::get('/test',function(){var_dump(\Auth::user());});
 
 
 Route::get('/doc/{doc}',"DocController@showdoc");
@@ -27,5 +27,6 @@ Route::get('/resetpass',function(){return view("passport/resetpass");});
 Route::get('/active/account',"UserController@activeEmail");
 
 Route::post('/register',"UserController@regiestPost");
+Route::post('/setLoginPass',"UserController@setLoginPass");
 
 

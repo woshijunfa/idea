@@ -44,16 +44,23 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
                             ];
 
 
+    //设置邮箱
     public static function initEmail($email)
     {
         if (empty($email)) return false;
         $uuid = gGuid();
         $result = self::insert(['email_key'=>$uuid,'status'=>-1,'email'=>$email]);
 
-        
-
-
         return $result ? $uuid : false;
     }
 
+    //设置登录密码
+    public static function setLoginPassword($userid,$password)
+    {
+        if (empty($userid) || empty($password)) return false;
+
+        $password = Hash::make($password);
+        self::where("id",$userid)->update(['status'=>0,'password'=>$password]);
+        return true;
+    }
 }

@@ -16,4 +16,9 @@ abstract class Controller extends BaseController
     {
         return Response::json(compact('code','message','data'));
     }
+
+    public function errorPage($desc='')
+    {
+    	return view("errors.error",compact('desc'));
+    }
 }

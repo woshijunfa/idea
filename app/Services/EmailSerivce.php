@@ -9,6 +9,7 @@
 namespace App\Services;
 use Log;
 use Config;
+use View;
 
 class EmailSerivce
 {
@@ -39,7 +40,7 @@ class EmailSerivce
             //邮件对象实例化
             $mailer = \Swift_Mailer::newInstance($transport);
             $message = \Swift_Message::newInstance();
-            $message->setFrom([$userName => '电销系统']);
+            $message->setFrom([$userName => 'ShareApi']);
 
             if(empty($receiver)){
                 $message->setTo(config("mail.exception_receiver"));
