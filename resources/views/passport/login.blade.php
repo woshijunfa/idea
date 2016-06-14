@@ -18,7 +18,7 @@
     </div>
     <div class="il_btn clearfix">
         <button type="submit" id="loginBtn" class="btn btnBlack btn-block" disabled="disabled">登录</button>
-        <a href="https://dashboard.pingxx.com/page/auto/resetPassword" class="retrieve">忘记密码</a>
+        <a href="/resetpass" class="retrieve">忘记密码</a>
         <a href="/register" class="reg">注册账户</a>
     </div>
     </form>
@@ -113,21 +113,32 @@
 
                 var opt={
                     email:username,
-                    password:password
+                    password:password,
+                    _token : "{{ csrf_token() }}"
                 };
 
                 $('#loginBtn').text('登录中...');
 
                 _this.login(opt).done(function(data){
-                    if(data.status){
-                        cookie.setWithExpire('lastLoginName',username,100);
-                        if(location.search.length>0){
-                            var url = location.search.split('?refer_url=')[1];
-                            window.location.href = decodeURIComponent(url);
-                        }else{
-                            window.location.href = 'https://dashboard.pingxx.com/list';
-                        }
+
+                    if (data.code == 0) {
+                        window.location.href = '/';
                     }
+                    else
+                    {
+                        $('#loginBtn').addClass('error');
+                        $('#loginBtn').text(data.message);
+                    }
+
+                    // if(data.status){
+                    //     cookie.setWithExpire('lastLoginName',username,100);
+                    //     if(location.search.length>0){
+                    //         var url = location.search.split('?refer_url=')[1];
+                    //         window.location.href = decodeURIComponent(url);
+                    //     }else{
+                    //         window.location.href = 'https://dashboard.pingxx.com/list';
+                    //     }
+                    // }
                 }).fail(function(err){
                     $('#loginBtn').addClass('error');
                     $('#loginBtn').text(err.data.message);

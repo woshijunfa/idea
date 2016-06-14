@@ -25,8 +25,12 @@ Route::get('/login',function(){return view("passport/login");});
 Route::get('/register',function(){return view("passport/register");});
 Route::get('/resetpass',function(){return view("passport/resetpass");});
 Route::get('/active/account',"UserController@activeEmail");
+Route::get('/active/resetpassword',"UserController@activeResetPassword");
 
+
+Route::post('/login',"UserController@loginPost");
 Route::post('/register',"UserController@regiestPost");
 Route::post('/setLoginPass',"UserController@setLoginPass");
+Route::post('/resetPassEmail',"UserController@resetPassEmail");
 
 

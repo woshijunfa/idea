@@ -55,7 +55,16 @@
         //登录操作
         $.post("/register", postdata,
         function(data){
-
+            if (data.code == 0) {
+                $("#default_tip").hide();
+                $("#success_tip").show();
+                $('#registerBtn').text("发送成功");
+            }
+            else
+            {
+                $('#registerBtn').addClass('error');
+                $('#registerBtn').text(data.message);
+            }
         });
     });
 

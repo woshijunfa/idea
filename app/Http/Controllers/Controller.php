@@ -12,7 +12,7 @@ abstract class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function json($code,$data,$message)
+    public function json($code,$data=[],$message='')
     {
         return Response::json(compact('code','message','data'));
     }

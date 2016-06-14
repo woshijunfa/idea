@@ -63,4 +63,15 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         self::where("id",$userid)->update(['status'=>0,'password'=>$password]);
         return true;
     }
+
+    //根据邮箱更新md5,并返回
+    public static function updateEmailKey($email)
+    {
+        if (empty($email)) return false;
+        $uuid = gGuid();
+        self::where("email",$email)->update(['email_key'=>$uuid]);
+
+        return $uuid;
+
+    }
 }
