@@ -144,4 +144,12 @@ class UserController extends Controller
         return View("passport.setPass");
     }
 
+    //退出登录
+    public function logout()
+    {
+        Auth::logout();
+        return Redirect('/');
+    }
+
+
 }

@@ -47,13 +47,13 @@
         <div class="wrapper">
             <div class="row">
                 <ul class="pull-left">
-                    <li><a href="https://pingxx.com/about" target="_blank">关于我们</a></li>
+<!--                     <li><a href="https://pingxx.com/about" target="_blank">关于我们</a></li>
                     <li><a href="https://pingxx.com/docs/overview" target="_blank">开发文档</a></li>
                     <li><a href="https://pingxx.com/terms#terms" target="_blank">服务协议</a></li>
-                    <li><a href="https://pingxx.com/terms#privacy" target="_blank">隐私政策</a></li>
+                    <li><a href="https://pingxx.com/terms#privacy" target="_blank">隐私政策</a></li> -->
                 </ul>
                 <div class="icp pull-right">
-                    沪 ICP 备 xxxxx 号 -1 <a href="/" target="_self">&copy; shareApi</a>
+                    <!-- 沪 ICP 备 xxxxx 号 -1 --> <a href="/" target="_self">&copy; shareApi</a>
                 </div>
             </div>
         </div>
