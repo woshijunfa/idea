@@ -5,7 +5,7 @@
 <div class="il_box">
 <div class="il_body" id="p-body">
 <h4>注 册</h4>
-<p id="default_tip">Ping++ 将发送一封验证邮件到你的邮箱，此邮箱将作为登录用户名</p>
+<p id="default_tip">ShareApi 将发送一封验证邮件到你的邮箱，此邮箱将作为登录用户名</p>
 <p id="success_tip" style="display:none;">注册验证邮件已发送到 
     <a href="javascript:void 0;" id="email_0"></a><br>
 如果没有收到，请检查垃圾邮件<br>如果还是没有收到，请重新填写邮箱</p>
@@ -13,7 +13,7 @@
 <label class="sr-only">输入你的邮箱</label>
 <input data-toggle="tooltip" data-placement="top" data-html="true" id="email" value="" class="form-control" placeholder="输入你的邮箱">
 </div>
-<div class="checkboxFormGroup" style="">
+<!-- <div class="checkboxFormGroup" style="">
 <label class="virtualCheckbox" for="isAgree" id="forAgree">
 <input type="checkbox" name="isCheck" id="isAgree" value="0">
 </label>
@@ -23,7 +23,7 @@
     和
     <a href="https://pingxx.com/terms#privacy" target="_blank" class="text-blue">《隐私权协议》</a>
 </span>
-</div>
+</div> -->
 <button disabled="disabled" id="registerBtn" type="submit" class="btn btnBlack btn-block">发送验证邮件</button>
 <div class="tologin text-center">已有账号？
     <a href="/login" target="_self" class="text-blue">点此登录</a>
@@ -41,7 +41,7 @@
 
     function testEnable()
     {
-        ($("#forAgree").hasClass("checked") && $("#email").val().trim().isEmail()) ? 
+        ($("#email").val().trim().isEmail()) ? 
         $("#registerBtn").removeAttr("disabled") 
         : $("#registerBtn").attr("disabled", "disabled");
     }

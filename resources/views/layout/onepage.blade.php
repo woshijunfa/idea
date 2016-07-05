@@ -14,7 +14,7 @@
 <body style="height: 100%;">
 <div class="i_login">
     <div class="il_nav" id="il_nav">
-        <a href="/" target="_self" class="logo">Ping++</a>
+        <a href="/" target="_self" class="logo">ShareApi</a>
     </div>
     <div class="il_wrap" id="il_wrap">
 
