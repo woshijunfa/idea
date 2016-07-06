@@ -53,7 +53,7 @@
                     <li><a href="https://pingxx.com/terms#privacy" target="_blank">隐私政策</a></li> -->
                 </ul>
                 <div class="icp pull-right">
-                    <!-- 沪 ICP 备 xxxxx 号 -1 --> <a href="/" target="_self">&copy; shareApi</a>
+                    京 ICP 备 16034375 号 <a href="/" target="_self">&copy; shareApi</a>
                 </div>
             </div>
         </div>

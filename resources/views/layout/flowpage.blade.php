@@ -74,7 +74,7 @@
             <!-- <li><a href="/terms" data-t="footer.legal">法律条款</a></li> -->
           </ul>
           <p class="xsmall">© ShareApi 
-          <!-- <span class="beian">沪 ICP 备 xxxxx 号 - 1</span> -->
+          <span class="beian">京 ICP 备 16034375 号</span>
           </p>
         </div>
       </div>
