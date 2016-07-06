@@ -39,5 +39,5 @@ Route::post('/register',"UserController@regiestPost");
 Route::post('/setLoginPass',"UserController@setLoginPass");
 Route::post('/resetPassEmail',"UserController@resetPassEmail");
 
-Route::any('/imgrec',function(){ echo json_encode(['code'=>-100,'desc'=>'未授权请求']);});
+Route::any('/mobile/get',function(){ echo json_encode(['code'=>-100,'desc'=>'未授权请求']);});
 

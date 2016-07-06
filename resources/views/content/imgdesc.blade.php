@@ -174,11 +174,11 @@
 <div class="section">
     <div class="api_intro">
         <div class="pic">
-            <img style="border:1px solid #000" src="https://www.showapi.com/images/apiLogo/20150623/5588421c6e36222a36ef7a1e_2c639346907143179264c464de132268.jpg" style="max-width:110px;max-height:110px">
+            <img style="border:1px solid #000" src="https://www.juhe.cn/themes/images/data/new/a11.png" style="max-width:110px;max-height:110px">
         </div>
         <div class="text" style="margin-bottom:4px;">
-            <h6>图形验证码识别</h6>    
-            <p style="font-size:14px;text-align:left;">本验证码提供英文、数字、中文或混合型验证码的识别。本验证码仅为残障人士提供验证码识别服务，并不针对任何网站或个人。</p>
+            <h6>手机号码归属地</h6>    
+            <p style="font-size:14px;text-align:left;">根据手机号码或手机号码的前7位，查询手机号码归属地信息，包括省份 、城市、区号、邮编、运营商和卡类型。</p>
         </div>
     </div>
     <div class="clear"></div>
@@ -193,159 +193,133 @@
 <div class="section" id = 'api_detial' style="background:rgb(242, 242, 242);">
     <div name="docDiv">    
      <form id="rightForm" style="padding:20px;">
-                <div class="section_list" id="idurl">
-                    <h2>请求URL地址</h2>
-                    <div class="url" style="font-size:18px;" id="forCopyUrl">http://www.shareapi.com/imgrec</div>
-                    <div class="tip">注意：接口支持https，更安全，但稍慢一些，你懂的。请根据自己的情况进行选择。</div>
-                    
-                </div>
-                
-                <div class="section_list" id="idreq">
-                    <h3>请求参数</h3>
-                    <div class="tip">HTTP协议，支持GET/POST方法。</div>
-                    <div class="tip">1.系统级参数：</div>
-                    <table class="charge_data db_color  " style="word-break: break-all; font-size: 14px;">
-                        <tbody>
-                        <tr>
-                            <th style="width:25%">参数名称</th>
-                            <th style="width:10%">类型</th>
-                            <th style="width:15%">示例值</th>
-                            <th style="width:7%">必须</th>
-                            <th class="ms">描述</th>
-                        </tr>   
-                                  <tr class="db">
-                            <td>shareapi_appid</td>  
-                            <td>String</td>
-                            <td>100</td>
-                            <td>是</td>
-                            <td>易源应用id</td>
-                        </tr>
-                        <tr>
-                            <td>shareapi_sign</td>   
-                            <td>String</td>
-                            <td>698d51a19d8a121ce581499d7b701668</td>
-                            <td>是</td>
-                            <td>为了验证用户身份，以及确保参数不被中间人篡改，需要传递调用者的数字签名。<br>
-                            </td>
-                        </tr>
-                        <tr class="db">
-                            <td>shareapi_timestamp</td>  
-                            <td>String</td>
-                            <td>20141114142239</td>
-                            <td>否</td>
-                            <td>客户端时间。  
-                             <br>格式yyyyMMddHHmmss,如20141114142239 <br>
-                             为了在一定程度上防止“重放攻击”，平台只接受在10分钟之内的请求。如果不传或传空串，则系统不会10分钟的检测。
-                             </td>
-                        </tr>
-                        <tr>
-                            <td>shareapi_sign_method</td>    
-                            <td>String</td>
-                            <td>md5</td>
-                            <td>否</td>
-                            <td>签名生成方式，其值可选为"md5"或"hmac"。如果不传入则默认"md5"。</td>
-                        </tr>
-                        <tr class="db">
-                            <td>shareapi_res_gzip</td>   
-                            <td>String</td>
-                            <td>1或0</td>
-                            <td>否</td>
-                            <td>返回值是否用gzip方式压缩。此值为1时将压缩，其他值不压缩。</td>
-                        </tr>
-                        </tbody>                            
-                    </table>
-                    
-                    <div class="tip">2.应用级参数</div>
-                    <table class="charge_data db_color  " style="word-break:break-all;font-size:14px;">
-                        <tbody id="inModelTrTbody">
-                        <tr>
-                            <th style="width:15%">参数名称</th>
-                            <th style="width:10%">类型</th>
-                            <th style="width:10%">默认值</th>
-                            <th style="width:15%">示例值</th>
-                            <th style="width:7%">必须</th>
-                            <th class="ms">描述</th>
-                        </tr>   
-                                        <tr class="inModelTr db">
-                                <td key="pname" value="image">image</td>    
-                                <td key="type" data="{'String':'String','byte[]':'byte[]'}" value="byte[]">byte[]</td>
-                                <td key="default" value=""></td>
-                                <td key="example" value=""></td>
-                                <td key="must" data="{'是':'是','否':'否'}" value="是">是</td>
-                                <td key="remark" value="以表单提交形式上的图片文件。">以表单提交形式上的图片文件。</td>
+
+<div class="das_right">
+                        <div class="simpleline"><strong>接口地址：</strong><span class="url">http://www.shareapi.cn/mobile/get</span></div>
+                        <div class="simpleline"><strong>支持格式：</strong><span class="url">json/xml</span></div>
+                        <div class="simpleline"><strong>请求方式：</strong><span class="url">get</span></div>
+                        <div class="simpleline"><strong>请求示例：</strong><span class="url">http://www.shareapi.cn/mobile/get?phone=13429667914&amp;key=您申请的KEY</span></div>
+
+                        
+                                                <div class="simpleline simpleTable">
+                            <strong>请求参数说明：</strong>
+                            <table class="api_table" border="0" cellspacing="0" cellpadding="0">
+                                <tbody><tr class="title">
+                                    <th width="20"></th>
+                                    <th width="100">名称</th>
+                                    <th width="80">类型</th>
+                                    <th width="60">必填</th>
+                                    <th>说明</th>
                                 </tr>
-                                        <tr class="inModelTr">
-                                <td key="pname" value="typeId">typeId</td>  
-                                <td key="type" data="{'String':'String','byte[]':'byte[]'}" value="String">String</td>
-                                <td key="default" value="1040">1040</td>
-                                <td key="example" value="1040">1040</td>
-                                <td key="must" data="{'是':'是','否':'否'}" value="是">是</td>
-                                <td key="remark" value="1.纯数字<br />typeId=1000 任意长度数字，识别率会降低<br />typeId=1010 1位数字<br />typeId=1020 2位数字<br />...<br />typeId=1100 10位数字<br /><br />2.纯英文<br />typeId=2000 任意长度英文，识别率会降低<br />typeId=2010 1位英文<br />typeId=2020 2位英文<br />...<br />typeId=2100 10位英文<br /><br />3.英文数字混合<br />typeId=3000 任意长度英数混合，识别率会降低<br />typeId=3010 1位英数<br />typeId=3020 2位英数混合<br />...<br />typeId=3100 10位英数混合<br /><br />4.纯汉字<br />typeId=4000 任意长度汉字混合，识别率会降低<br />typeId=4010 1位汉字<br />typeId=4020 2位汉字<br />...<br />typeId=4100 10位汉字<br /><br />5.数字英文汉字混合<br />typeId=5000 任意长度中英数三混">1.纯数字<br>typeId=1000 任意长度数字，识别率会降低<br>typeId=1010 1位数字<br>typeId=1020 2位数字<br>...<br>typeId=1100 10位数字<br><br>2.纯英文<br>typeId=2000 任意长度英文，识别率会降低<br>typeId=2010 1位英文<br>typeId=2020 2位英文<br>...<br>typeId=2100 10位英文<br><br>3.英文数字混合<br>typeId=3000 任意长度英数混合，识别率会降低<br>typeId=3010 1位英数<br>typeId=3020 2位英数混合<br>...<br>typeId=3100 10位英数混合<br><br>4.纯汉字<br>typeId=4000 任意长度汉字混合，识别率会降低<br>typeId=4010 1位汉字<br>typeId=4020 2位汉字<br>...<br>typeId=4100 10位汉字<br><br>5.数字英文汉字混合<br>typeId=5000 任意长度中英数三混</td>
+                                                                  <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="url">phone</td>
+                                    <td class="url">int</td>
+                                    <td class="url">是</td>
+                                    <td>需要查询的手机号码或手机号码前7位</td>
+                                  </tr>
+                                                                    <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="url">key</td>
+                                    <td class="url">string</td>
+                                    <td class="url">是</td>
+                                    <td>应用APPKEY(应用详细页查询)</td>
+                                  </tr>
+                                                                    <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="url">dtype</td>
+                                    <td class="url">string</td>
+                                    <td class="url">否</td>
+                                    <td>返回数据的格式,xml或json，默认json</td>
+                                  </tr>
+                                                              </tbody></table>
+                        </div>
+                        <div class="simpleline simpleTable">
+                            <strong>返回参数说明：</strong>
+                            <table class="api_table" border="0" cellspacing="0" cellpadding="0">
+                                <tbody><tr class="title">
+                                    <th width="20"></th>
+                                    <th width="100">名称</th>
+                                    <th width="80">类型</th>
+                                    <th>说明</th>
                                 </tr>
-                        </tbody>                            
-                    </table>
-                        
-                        
-                </div>
-                
-                <div class="section_list" id="idres">
-                    <h3>返回参数</h3>
-                    <div class="tip">以JSON格式返回结果。</div>
-                    <div class="tip">1.系统级参数：</div>
-                    <table class="charge_data db_color" style="word-break: break-all; font-size: 14px;">
-                        <tbody>
-                        <tr>
-                            <th style="width:20%">名称</th>
-                            <th style="width:15%">类型</th>
-                            <th style="width:30%">示例值</th>
-                            <th class="ms">描述</th>
-                        </tr>   
-                            <tr class="db">
-                            <td>shareapi_res_code</td>   
-                            <td>int</td>
-                            <td>0</td>
-                            <td>易源返回标志，0为成功，其他为失败。</td>
-                        </tr>
-                        <tr>
-                            <td>shareapi_res_error</td>  
-                            <td>String</td>
-                            <td>用户输入有误!</td>
-                            <td>错误信息的展示</td>
-                        </tr>
-                        <tr class="db">
-                            <td>shareapi_res_body</td>   
-                            <td>String</td>
-                            <td>{"city":"昆明","prov":"云南"}</td>
-                            <td>消息体的JSON封装，所有应用级的返回参数将嵌入此对象 。</td>
-                        </tr>
-                        </tbody>                        
-                    </table>
-                    
-                    <div class="tip">2.应用级参数：</div>
-                    <table class="charge_data db_color" style="word-break:break-all;font-size:14px;"> 
-                        <tbody id="outModelTrTbody">
-                        <tr>
-                            <th style="width:20%">名称</th>
-                            <th style="width:15%">类型</th>
-                            <th style="width:15%">示例值</th>
-                            <th class="ms">描述</th>
-                        </tr>   
-                                    <tr class="outModelTr db">
-                                <td key="pname">Result</td> 
-                                <td key="type">String</td>
-                                <td key="example">6nr9a </td>
-                                <td key="remark">识别出来的字符。 </td>
-                            </tr>
-                            
-                        </tbody>                        
-                    </table>
-                        
-                </div>
-                
-                
-                
-                <br><br><br><br>
-                </form>
+                                                                  <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="url">error_code</td>
+                                    <td class="url">int</td>
+                                    <td>返回码</td>
+                                  </tr>
+                                                                    <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="url">reason</td>
+                                    <td class="url">string</td>
+                                    <td>返回说明</td>
+                                  </tr>
+                                                                    <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="url">result</td>
+                                    <td class="url">string</td>
+                                    <td>返回结果集</td>
+                                  </tr>
+                                                                    <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="url">province</td>
+                                    <td class="url">string</td>
+                                    <td>省份</td>
+                                  </tr>
+                                                                    <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="url">city</td>
+                                    <td class="url">string</td>
+                                    <td>城市</td>
+                                  </tr>
+                                                                    <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="url">areacode</td>
+                                    <td class="url">string</td>
+                                    <td>区号</td>
+                                  </tr>
+                                                                    <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="url">zip</td>
+                                    <td class="url">string</td>
+                                    <td>邮编</td>
+                                  </tr>
+                                                                    <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="url">company</td>
+                                    <td class="url">string</td>
+                                    <td>运营商</td>
+                                  </tr>
+                                                                    <tr>
+                                    <td>&nbsp;</td>
+                                    <td class="url">card</td>
+                                    <td class="url">string</td>
+                                    <td>卡类型</td>
+                                  </tr>
+                                                              </tbody></table>
+                        </div>
+                                                <div class="simpleline simpleTable">
+                            <b>JSON返回示例：</b>
+                            <div class="prediv">
+                                <pre>{
+"code":"200",
+"desc":"Return Successd!",
+"data":{
+    "province":"浙江",
+    "city":"杭州",
+    "areacode":"0571",
+    "zip":"310000",
+    "company":"中国移动",
+    "card":"移动动感地带卡"
+}
+}</pre>
+                            </div>
+                        </div>
+                                                                        <div class="simpleline">
+                        </div>
+                                            </div>
+
     </div>
 
     <div name="pricetable"  style="display:none;with:620px;padding-left:240px;">
@@ -355,16 +329,16 @@
                 <h3 class="plan-title">一次性礼包</h3>
                 <p class="plan-price">0.01<span class="plan-unit">时间：180天</span></p>
                 <ul class="plan-features">
-                    <li class="plan-feature">50次<span class="plan-feature-name">调用 </span></li>
+                    <li class="plan-feature">100次<span class="plan-feature-name">调用 </span></li>
                     <li class="plan-feature">不限<span class="plan-feature-name">调用频率</span> </li>
                 </ul>
                 <a href="/buy?id=1">订购套餐</a>
             </div>
                     <div class="plan">
-                        <h3 class="plan-title">30元/1200次</h3>
-                        <p class="plan-price">30 <span class="plan-unit">时间：180天</span></p>
+                        <h3 class="plan-title">10元/10000次</h3>
+                        <p class="plan-price">10 <span class="plan-unit">时间：180天</span></p>
                         <ul class="plan-features">
-                            <li class="plan-feature">1200次<span class="plan-feature-name">调用 </span></li>
+                            <li class="plan-feature">10000次<span class="plan-feature-name">调用 </span></li>
                             <li class="plan-feature">不限<span class="plan-feature-name">调用频率</span> </li>
                         </ul>
                         <a href="/buy?id=2">订购套餐</a>
